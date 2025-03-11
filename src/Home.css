@@ -1,0 +1,102 @@
+body{
+    scroll-behavior: smooth;
+}
+.main{
+    background: linear-gradient(rgba(0, 0, 0,0.7),rgba(0,0,0,0.7)),url(assets/Hotel/wp1846070-hotels-wallpapers.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 50pc;
+    background-position-y: 100px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.heading{
+    color: aliceblue;
+    margin-top: 90px;
+    text-transform: uppercase;
+    animation:bounceInLeft;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    text-shadow: 15px 10px 6px black;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+    
+.div1 {
+    grid-column: span 3 / span 3;
+    grid-row: span 5 / span 5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation: evening 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+}
+@keyframes evening {
+    from{transform: translateX(-300px);}
+    to{transform: translateX(0px);}
+}
+.div2 {
+    grid-row: span 5 / span 5;
+    grid-column-start: 5;
+    
+}
+#social{
+    color:#d7dfec;
+    font-style: oblique;
+    font-family: monospace;
+    font-variant: small-caps;
+    text-shadow: 10px 7px 6px #9b9da0ef;
+}
+.div2 img{
+    filter: drop-shadow(17px 9px 2px rgb(38, 58, 41));
+    cursor: pointer;
+    transition: all 2s cubic-bezier(0.23, 1, 0.320, 1);
+    
+}
+.div2 img:hover{
+    padding: 10px;
+    filter: none;
+}
+#room{
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: img 4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-timeline: view();
+    animation-range: entry 17% cover 40%;
+}
+#room img{
+    height: 40dvh;
+    border: 3px solid #d7dfec;
+    box-shadow: 8px 5px 20px teal;
+    border-radius: 20px 40px ;
+  
+}
+@keyframes img {
+    from{transform:skewX(30deg);opacity: 0.4; }
+    to{transform:skewX(0deg); opacity: 1;}
+
+}
+#book:hover{
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-style: oblique;
+    font-size: 13px;
+}
+#pub{
+    transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    animation: pub 4s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20% ;
+}
+@keyframes pub {
+    from{filter: blur(30px);padding: 400px}
+    to{filter: blur(0px); padding: 0%;}
+}
+#changer{
+    animation:fadeInUp ;
+    animation-duration: 2s;
+}
